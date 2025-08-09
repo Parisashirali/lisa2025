@@ -33,7 +33,7 @@ class nnUNetTrainer_500epochs_NoMirroring(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict, 
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
-        self.num_epochs = 100
+        self.num_epochs = 500
 
     def configure_rotation_dummyDA_mirroring_and_inital_patch_size(self):
         rotation_for_DA, do_dummy_2d_data_aug, initial_patch_size, mirror_axes = \
